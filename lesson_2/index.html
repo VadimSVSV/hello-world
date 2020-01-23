@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>    
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+</head>
+<body>
+	 
+	<button onclick="task1 ()">1 задание</button>
+
+		<script>
+		alert('1 задание');
+
+        var a=1, b=1, c, d;
+        c=++a; alert(c);       //№1 =2. префикс - значение после выполнения инкремента 1+1=2
+        d=b++; alert(d);       //№2 =1. постфикс - значение до выполнения операции b=1
+        c=(2+ ++a); alert(c);  //№3 =5. после операции №1 а=2. (2+ (2+1))=5
+        d=(2+ b++); alert(d);  //№4 =4. после выполнения операции №2 и до выполнения 
+                               //операции №4, значение b=2. (2+ (2))=4, 
+        alert(a);              //№5 =3. после оерации №3 a=3.
+        alert(b);              //№6 =3. после выполнения операции №4, значение b=3.
+        </script>
+
+    <button onclick="task2 ()">2 задание</button>
+        <script>
+		alert('2 задание');
+       	var a=2;
+       	var x=1+ (a *=2);      //=1+ (2 * 2)=5, использован шаг умножения на 2
+       	console.log (x + '.     Результат задания №2');
+		alert (x + '.     Результат задания №2');
+        </script> 
+        
+     <button onclick="task3()">3 задание</button>
+        <script>
+		alert('3 задание');
+        var f = prompt ('Выполним следующие арифметические действия с двумя целочисленными числами: РАЗНОСТЬ - если числа положительные, ПРОИЗВЕДЕНИЕ - если числа отрицательные, СУММА - если числа разных знаков. Введи первое целочисленное число f:');
+        var e = prompt ('Введи второе целочисленное число e:');
+        if (f>=0 && e>=0) {
+            alert ((f-e) + '.     Результат задания № 3.1. Разность f - e.');
+            console.log ((f-e) + '.     Результат задания № 3.1. Разность f - e.');
+        } else if (f<0 && e<0) {
+            alert ((f*e) + '.     Результат задания № 3.2. Произведение f * e.');
+            console.log ((f*e) + '.     Результат задания № 3.2. Произведение f * e.');
+        } else if ((f<0 && e>=0) || (f>=0 && e<0)) {
+                f=parseInt(f);
+                e=parseInt(e); 
+            alert ((f)+(e)) + '.     Результат задания № 3.3. Сумма f + e.';
+            console.log ((f)+(e)) + '.     Результат задания № 3.3. Сумма f + e.';
+        }
+        </script>    
+
+
+<button onclick="task4()">4 задание</button>
+        <script>
+		alert('4 задание');
+        var k = +prompt ('Выберите число в промежутке [0...15]:');
+        k=parseInt(k);
+        switch (k) {
+            case 0:
+                k = 0;
+                console.log ('Вы ввели число ноль            ' + k);
+                break;
+            case 1:
+                k = 1;
+                console.log ('Вы ввели число один            ' + k);
+                break;
+            case 2:
+                k = 2;
+                console.log ('Вы ввели число два             ' + k);
+                break;
+            case 3:              
+                k = 3;
+                console.log ('Вы ввели число три             ' + k);
+                break;
+            case 4:
+                k = 4;
+                console.log ('Вы ввели число четыре          ' + k);
+                break;
+            case 5:
+                k=5;
+                console.log ('Вы ввели число пять             ' + k);
+                break;
+            case 6:
+                k=6;
+                console.log ('Вы ввели число шесть            ' + k);
+                break;
+            case 7:
+                k=7;
+                console.log ('Вы ввели число семь             ' + k);
+                break;
+            case 8:
+                k=8;
+                console.log ('Вы ввели число восемь          ' + k);
+                break;
+            case 9:
+                k=9;
+                console.log ('Вы ввели число девять          ' + k);
+                break;
+            case 10:
+                k=10;
+                console.log ('Вы ввели число десять          '+ k);
+                break;
+            case 11:
+                k=11;
+                console.log ('Вы ввели число одиннадцать      ' + k);
+                break;
+            case 12:
+                k=12;
+                console.log ('Вы ввели число двенадцать        ' + k);
+                break;
+            case 13:
+                k=13;
+                console.log ('Вы ввели число тринадцать         ' + k);
+                break;
+            case 14:
+                k=14;
+                console.log ('Вы ввели число четырнадцать        ' + k);
+                break;
+            case 15:
+                k=15;
+                console.log ('Вы ввели число пятнадцать          ' + k);
+                break;
+            default:
+                console.log ('Ничего нет !  )-:   ');
+                break;
+        }  
+        </script>    
+
+    <button onclick="task6()">5-6 задание</button>
+    <script>
+	alert('5-6 задание');
+
+	function showPrivet() {
+  		alert( 'Привет!' );
+	}
+	function showDalee() {
+  		alert( 'Продолжим?' );
+	}
+	function showGoodBay() {
+  		alert( 'Пока!' );
+	}
+
+	showPrivet();
+	alert('Давайте выведем значение суммы');
+        console.log ('Давайте выведем значение суммы');
+
+	function sum (a,b) {
+ 	if (isNaN(a) || isNaN(b)) {
+  		alert("Вводить нужно было только числа");
+  		return 0;
+ 	}
+ 		return a+b;
+	}
+ 
+	var arg1 = +prompt("Введите первое число", "17");     
+	var arg2 = +prompt("Введите второе число", "11");    
+	alert('Выведем значение суммы       ' + sum (arg1, arg2));
+	console.log ('Выведем значение суммы       ' + sum (arg1, arg2));
+
+	showDalee();
+	alert('Давайте выведем значение разности');
+        console.log ('Давайте выведем значение разности');
+
+	function raz (a,b) {
+ 	if (isNaN(a) || isNaN(b)) {
+  		alert("Вводить нужно было только числа");
+  		return 0;
+ 	}
+ 		return a-b;
+	}
+ 
+	var arg1 = +prompt("Введите первое число", "17");     
+	var arg2 = +prompt("Введите второе число", "11");    
+	alert('Выведем значение разности       ' + raz (arg1, arg2));
+	console.log ('Выведем значение разности       ' + raz (arg1, arg2));
+
+	showDalee();
+	alert('Давайте выведем значение умножения');
+        console.log ('Давайте выведем значение умножения');
+
+	function umn (a,b) {
+ 	if (isNaN(a) || isNaN(b)) {
+  		alert("Вводить нужно было только числа");
+  		return 0;
+ 	}
+ 		return a*b;
+	}
+ 
+	var arg1 = +prompt("Введите первое число", "17");     
+	var arg2 = +prompt("Введите второе число", "11");    
+	alert('Выведем значение умножения       ' + umn (arg1, arg2));
+	console.log ('Выведем значение умножения       ' + umn (arg1, arg2));
+
+	showDalee();
+	alert('Давайте выведем значение деления');
+        console.log ('Давайте выведем значение деления');
+
+	function dell (a,b) {
+ 	if (isNaN(a) || isNaN(b)) {
+  		alert("Вводить нужно было только числа");
+  		return 0;
+ 	}
+ 		return a/b;
+	}
+ 
+	var arg1 = +prompt("Введите первое число", "17");     
+	var arg2 = +prompt("Введите второе число", "11");    
+	alert('Выведем значение деления       ' + dell (arg1, arg2));
+	console.log ('Выведем значение деления       ' + dell (arg1, arg2));
+
+	showPrivet();
+
+	var arg1 = 17;
+	var arg2 = 11;
+	var operation = "СУММА";
+
+	alert('Давайте ещё раз выполним любую арифметическую операцию: СУММА, РАЗНОСТЬ, ДЕЛЕНИЕ, УМНОЖЕНИЕ. Введите два значения и арифм.операцию.');
+        console.log ('Давайте ещё раз выполним любую арифметическую операцию: СУММА, РАЗНОСТЬ, ДЕЛЕНИЕ, УМНОЖЕНИЕ. Введите два значения и арифм.операцию.');
+
+	var arg1 = +prompt('Введите первое число', '17');  
+   		console.log (arg1);
+	var arg2 = +prompt('Введите второе число', '11'); 
+		console.log (arg2);
+   	var operation = +prompt('Введите наименование арифметической операции 1 - СУММА, 2 - РАЗНОСТЬ, 3 - ДЕЛЕНИЕ, 4 - УМНОЖЕНИЕ', '1'); 
+ 		console.log (operation);
+
+       switch (operation) {
+		    case 1:
+				text = "СУММА";
+				alert ('Вы ввели операцию СУММА');
+                console.log ('Вы ввели операцию СУММА');
+                break;
+            case 2:
+				text = 'РАЗНОСТЬ';
+				alert ('Вы ввели операцию РАЗНОСТЬ');
+                console.log ('Вы ввели операцию РАЗНОСТЬ');
+                break;
+            case 3:
+				text = 'ДЕЛЕНИЕ';
+				alert ('Вы ввели операцию ДЕЛЕНИЕ');
+                console.log ('Вы ввели операцию ДЕЛЕНИЕ');
+                break;
+            case 4:              
+				text = 'УМНОЖЕНИЕ';
+				alert ('Вы ввели операцию УМНОЖЕНИЕ');
+                console.log ('Вы ввели операцию УМНОЖЕНИЕ');
+                break;
+			default:
+				alert ("Something went horribly wrong...");
+				console.log ("Something went horribly wrong...");
+           console.log (operation);
+	}
+	showDalee();
+
+	function mathOperation (arg1,arg2,operation) {
+ 		if (operation == 1) {
+				alert ('Выведем значение суммы       ' + sum (arg1, arg2));
+				console.log ('Выведем значение суммы       ' + sum (arg1, arg2));
+		} 	else if (operation == 2) { 
+				alert ('Выведем значение разности      ' + raz (arg1, arg2));
+				console.log ('Выведем значение разности      ' + raz (arg1, arg2));
+		}	else if (operation == 3) { 
+				alert ('Выведем значение деления       ' + dell (arg1, arg2));
+				console.log ('Выведем значение деления       ' + dell (arg1, arg2));
+		}	else if (operation == 4) { 
+				alert ('Выведем значение умножения       ' + umn (arg1, arg2));
+				console.log ('Выведем значение умножения       ' + umn (arg1, arg2));
+		}
+	}
+
+	showGoodBay();
+  </script>    
+
+</body>
+</html>

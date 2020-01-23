@@ -1,0 +1,45 @@
+<!DOCTYPE html>    
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+</head>
+<body>
+    <button onclick="task1 ()">1задание</button>
+        <script>
+        //function hello () {
+          //  var name = 'Oleg'
+            //var helloString = 'Hello, ' + name
+            //console.log (helloString)
+        //}
+        //hello ()
+        function task1 () {
+            var Tc = prompt('Давай расчитаем температуру по Фаренгейту из температуры по Цельсию. Введи значение ', '')
+            if (Tc >= 0) {
+                var Tf = (9/5)*Tc +32;
+                alert(Tf + '.     Получите значение температуры по Фаренгейту!   :-)')
+                console.log (Tf + '.     Получите значение температуры по Фаренгейту!   :-)')
+            } else {
+                    alert('Неверно, введите число снова ')
+                    }  
+        }          
+        </script>
+
+    <button onclick="task2 ()">2задание</button>
+        <script>
+            var name = 'Василий'
+            var admin = name
+        console.log (admin)
+        </script> 
+        
+    <button onclick="task3 ()">3задание</button>
+        <script>
+            var one = 1000
+            var two = '108'
+        console.log (one + two)
+        </script>    
+
+</body>
+</html>
