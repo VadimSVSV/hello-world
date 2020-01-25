@@ -7,20 +7,45 @@
 <title>Document</title>
 </head>
 <body>
-    <button onclick="task1 ()">1задание</button>
-        <script>
-        
-        </script>
+    <button onclick="task1 ()">1 задание</button>
+    <script>  
+    let prime = 2;
+    let primeArr = [];
 
-    <button onclick="task2 ()">2задание</button>
-        <script>
-          
-        </script> 
-        
-    <button onclick="task3 ()">3задание</button>
-        <script>
-            
-        </script>    
+    while (prime <= 100) {
+        if (prime == 1) {
+            primeArr.push(1)
+        }   else {
+            let result = 2;
+            let i = 2;
+            while (prime % i !== 0 ){
+                i += 1;
+                result +=1;
+            } 
+            if (result == prime) {
+                primeArr.push(result);
+            }
+        }
+        prime += 1;
+    }
+    console.log(primeArr);
+    </script> 
+   
+    <button onclick="task3 ()">3 задание</button>
+    <script>
+        for(var number = 0; number <= 9; document.write(number++ + '')){}
+    </script>
 
+    <button onclick="task4 ()">4 задание</button>
+    <script>
+        var  piramide  =  '' ;
+        var  x  =  'x' ;
+    for ( var  i  =  0 ;  i  <  20 ;  i ++ ) {
+        piramide  +=  x ;
+    console.log (piramide);
+    }
+    </script>	
+
+        
 </body>
 </html>
