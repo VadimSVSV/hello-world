@@ -1,0 +1,74 @@
+<!DOCTYPE html>    
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+</head>
+<body>
+
+<script>   
+    let PRODUCTS_NAMES = ['Notebook', 'Display', 'Keyboard', 'Mouse', 'Phones', 'Router', 'USB-camera', 'Gamepad'];
+    let PRICES = [1000, 200, 20, 10, 25, 30, 18, 24];
+    let IDS = [0, 1, 2, 3, 4, 5, 6, 7];
+    
+    let div = document.createElement('tovar1');
+        div.className = "Notebook";
+        div.innerHTML = "<strong>1000$</strong>Купить";
+        document.body.append(div);
+
+               
+        let myDiv = document.querySelector ('#targ')
+
+        function createSomeDOM() {
+            let numberOfSections = 3
+            for (let ind = 1; ind <= numberOfSections; i++) {
+                let newDiv = document.createElement ('div')
+                let newParagraph = document.createElement ('p')
+
+                newDiv.id = 'id_' + ind
+                newParagraph.innerText = 'Paragraph' + ind
+                newDiv.style.marginBottom = '10px'
+
+                newDiv.appendChild (newParagraph)
+                myDiv.appendChild (newDiv)
+            }
+        }
+                createSomeDOM()
+
+        let products = []
+            function createProductsDTO (arr) {
+                
+                let length = IDS.length
+                for (let i = 0; i < length; i++) {
+                    arr.push (createProduct(i))
+                } 
+            }
+
+            function createProduct (index) {
+                return {
+                    product_name: PRODUCTS_NAMES [index],
+                    price: PRICES [index],
+                    id_product: IDS [index]
+                }
+            }
+
+            let card = {
+                items:[],
+                getSum() {
+
+                }
+            }
+
+            let catalog = {
+                items:[],
+                loadProducts() {
+                    createProductsDTO (this.items)
+                }
+            }
+
+</script>
+
+</body>
+</html>
