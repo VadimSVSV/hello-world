@@ -1,0 +1,49 @@
+#GALLERY {
+    width: 470px;
+    height: 300px;
+    position: relative;
+    border: 1px solid black;
+    display: block;
+    margin: 30px 0 0 220px;
+    text-align: center;
+    padding: 10px;
+}
+
+#roulette {
+  border: 1px solid black;
+  width: 800px;
+  text-align: center;
+  padding: 20px;
+  margin: 50px;
+}
+
+
+.prev {
+    position: absolute;
+    left: 2%;
+    top: 50%;
+    z-index: 1;
+}
+ 
+.next {
+    position: absolute;
+    left: 92%;
+    top: 50%;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
